@@ -1,7 +1,9 @@
 const app = require("./app");
-const port = 3333;
 
+function startServer(port) {
+  app.listen(port, () => {
+    console.log(`Server start up on port ${port}!`);
+  });
+}
 
-app.listen(port, () => {
-  console.log(`Server start up on port ${port}!`);
-});
+module.exports = startServer;
